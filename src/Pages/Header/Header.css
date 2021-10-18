@@ -1,0 +1,17 @@
+.items {
+    list-style: none;
+    margin-right: 30px;
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(218, 214, 214);
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: none;
+  }
+  .items:hover {
+    color: rgb(17, 17, 17);
+  }
+.site-logo{
+    width: 120px;
+    height:90px;
+  }
