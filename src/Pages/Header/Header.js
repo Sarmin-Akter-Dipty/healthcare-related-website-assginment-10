@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'
+import image from '../images/unnamed.png'
 
 const Header = () => {
     return (
         <div>
             <div className="d-flex justify-content-center align-items-center">
-                <img className="site-logo" src="https://lh3.googleusercontent.com/proxy/kqL6PrTC48o9A3w8AhjCnIL_7NsrGcKbAhGfXTxLbcukI9JLe3c6KxaL29iNwuKvwFGAMhi_QBHmuAhVzQBFRoYDTGfHzzNOWcnjrvK610OL9OqXIxsIpPHZz6i9uZdSM94kMEfWiy_PYsrLqe9LKLAFWiVHrX3f" alt="" />
+                <img className="site-logo" src={image} alt="" />
                 <h1 className="my-4 mx-2 text-secondary" >MEDICAL <span className="text">CARE</span></h1>
             </div>
             <div className="bg-secondary">
