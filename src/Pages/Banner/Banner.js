@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Header1 from '../images/Header1.jpg';
 import './Banner.css'
     ;
@@ -11,7 +12,8 @@ const Banner = () => {
                     <img src={Header1} class="w-100 hight" alt="..." />
                     <div className="carousel-caption d-none d-md-block">
                         <h1 className="text">WE ARE READY TO HELP YOU!</h1>
-                        <button className="bg-secondary text-white border-0 rounded px-4 py-1 my-2 ">CONTACT US</button>
+                        <Link to="/contact"><button className="bg-secondary text-white border-0 rounded px-4 py-1 my-2 ">CONTACT US</button>
+                        </Link>
                     </div>
                 </div>
 
