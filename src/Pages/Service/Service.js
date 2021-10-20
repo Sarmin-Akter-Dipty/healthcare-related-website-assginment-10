@@ -13,7 +13,7 @@ const Service = (props) => {
                 </div>
                 <h6>{name}</h6>
                 <p>{description}</p>
-                <Link to={`/singledetails/${id}`}><button className="rounded-pill px-4 py-1 border-0 btn-color">Booking Now</button></Link>
+                <Link to={`/singledetails/${id}`}><button className="rounded-pill px-4 py-1 border-0 btn-color">Details</button></Link>
             </div>
         </div >
     );

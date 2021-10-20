@@ -1,10 +1,9 @@
-import Button from '@restart/ui/esm/Button';
 import React from 'react';
 
 
 const Footer = () => {
     return (
-        <div className="bg-color my-2 bg-secondary">
+        <div className="bg-color mt-5 bg-secondary">
             <div className="row">
                 <div className="col-md-6">
                     <h3>Help Center</h3>
@@ -13,13 +12,15 @@ const Footer = () => {
                     <hr />
                     <h3>FAQ</h3>
                 </div>
-                <div className="col-md-6 my-5">
-                    <input className="border-0 rounded my-1" type="Email" placeholder="Enter Your Email" /><br />
-                    <input className="border-0 rounded my-1" type="Password" placeholder="Enter Your Password" /><br />
-                    <Button className=" bg-success text-white rounded-pill px-4 py-1 border-0">Login</Button>
+                <div className="col-md-6">
+                    <h2>Contact Details</h2>
+                    <p>250 Main Street, Brooklyn, NY 52143, US</p>
+                    <h4> Tell (800)-456-789</h4>
+                    <h5> Email :Medicalcare@gmail.com</h5>
+                    <h6>Website: Medicalcare.com</h6>
                 </div>
             </div>
-            <p>&copy; 2021 MEDICAL CARE Designed By PK</p>
+            <p>&copy; 2021 MEDICAL CARE Designed By KD</p>
         </div>
     );
 };

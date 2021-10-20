@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import './singleDetails.css'
 
 
 const SingleDetails = () => {
@@ -16,13 +17,14 @@ const SingleDetails = () => {
 
 
     return (
-        <div>
-            <h4>{id}</h4>
-            <img src={data?.img} alt="" />
-            <h3>{data?.name}</h3>
-            <p>{data?.description}</p>
-
-
+        <div className="row my-5">
+            <div className="col-md-12">
+                <div className="img">
+                    <img src={data?.img} alt="" />
+                </div>
+                <h3>{data?.name}</h3>
+                <p>{data?.description}</p>
+            </div>
         </div>
     );
 };

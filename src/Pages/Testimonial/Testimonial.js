@@ -19,7 +19,7 @@ const Testimonial = () => {
                     <div className="card m-4 rounded border-success ">
                         <img src={ceo2} className="mx-auto width" alt="..." />
                         <div className="card-body">
-                            <p className="card-text"><small className="text">Satya Nadella</small></p>
+                            <h3 className="card-text"><small className="text">Satya Nadella</small></h3>
                             <p className="card-text"><small className="text-muted">Social Media Manager</small></p>
                             <p className="card-text"><small className="text-muted">Very effective & special facilities.</small></p>
 
@@ -28,7 +28,7 @@ const Testimonial = () => {
                     <div className="card m-4 rounded border-success">
                         <img src={ceo1} className="mx-auto width" alt="..." />
                         <div className="card-body">
-                            <p className="card-text"><small className="text">Jason Wishnov</small></p>
+                            <h3 className="card-text"><small className="text">Jason Wishnov</small></h3>
                             <p className="card-text"><small className="text-muted">Lawyer</small></p>
                             <p className="card-text"><small className="text-muted">Extremely fast and helpful.</small></p>
                         </div>
@@ -36,7 +36,7 @@ const Testimonial = () => {
                     <div className="card m-4 rounded border-success">
                         <img src={ceo3} className="mx-auto width" alt="..." />
                         <div className="card-body">
-                            <p className="card-text"><small className="text">Christina</small></p>
+                            <h3 className="card-text"><small className="text">Christina</small></h3>
                             <p className="card-text"><small className="text-muted">Real Estate Agent</small></p>
                             <p className="card-text"><small className="text-muted">Provided all the support I was looking for.</small></p>
                         </div>
@@ -44,7 +44,7 @@ const Testimonial = () => {
                     <div className="card m-4 rounded border-success">
                         <img src={ceo4} className="mx-auto width" alt="..." />
                         <div className="card-body">
-                            <p className="card-text"><small className="text">Swapneel Deshmukh</small></p>
+                            <h3 className="card-text"><small className="text">Swapneel Deshmukh</small></h3>
                             <p className="card-text"><small className="text-muted">Financial Advisor</small></p>
                             <p className="card-text"><small className="text-muted"> Helpful, Clear and Awesome support.</small></p>
                         </div>
