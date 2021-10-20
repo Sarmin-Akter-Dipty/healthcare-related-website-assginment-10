@@ -1,10 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../context/useAuth';
 
 
 const Login = () => {
-    const { user, signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, islogin, handleNameChange } = useAuth();
+    const { signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, islogin, handleNameChange, } = useAuth();
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_uri = location.state?.from || '/home'
+    console.log('came from', location.state?.from);
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_uri);
+
+            })
+
+    }
+
     return (
         <div>
             <h2 className="text my-4">Please{islogin ? 'Login' : 'Register:Create Account'}</h2>
@@ -18,7 +31,7 @@ const Login = () => {
             <label htmlFor=""> <h6 className="text">Already Register?</h6></label>
             <div className="text-danger">{error}</div>
             <div>-------or-------</div>
-            <Link to="/home"><button onClick={signInUsingGoogle} className=" bg-success text-white rounded-pill px-4 py-1 border-0 my-4">Google Sign In</button></Link>
+            <Link to="/home"><button onClick={handleGoogleLogin} className=" bg-success text-white rounded-pill px-4 py-1 border-0 my-4">Google Sign In</button></Link>
 
 
 
