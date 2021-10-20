@@ -13,7 +13,7 @@ const MainService = () => {
         <div className="row">
             <h1 className="my-4 text">Our Services</h1>
             {
-                users.map(user => <Service key={user.Name} user={user}></Service>)
+                users.map(user => <Service key={user.id} user={user}></Service>)
             }
 
         </div>

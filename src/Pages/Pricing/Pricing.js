@@ -6,7 +6,7 @@ const Pricing = () => {
             <p className="container">Price regulations face political obstacles and have been strongly opposed by medical providers. But setting prices for all commercial health care payers could reduce hospital spending by $61.9 billion to $236.6 billion a year if the rates were set at 100 to 150 percent of the amounts paid by Medicare.</p>
 
             <div className="card-group container">
-                <div className="card m-4 border-secondary border-3">
+                <div className="card m-4">
                     <div className="card-body">
                         <h3 className="card-text text bg-secondary text-white">BASIC TESTS</h3>
                         <div className="d-flex justify-content-center">
@@ -37,7 +37,7 @@ const Pricing = () => {
                         <button className=" bg-secondary text-white px-4 py-1 border-0 my-2">Booking Now</button>
                     </div>
                 </div>
-                <div className="card m-4 rounded border-secondary border-3">
+                <div className="card m-4">
                     <div className="card-body">
                         <h3 className="card-text text bg-secondary text-white">STANDARD TESTS</h3>
                         <div className="d-flex justify-content-center">
@@ -68,7 +68,7 @@ const Pricing = () => {
                         <button className=" bg-secondary text-white px-4 py-1 border-0 my-2">Booking Now</button>
                     </div>
                 </div>
-                <div className="card m-4 rounded border-secondary border-3">
+                <div className="card m-4">
                     <div className="card-body">
                         <h3 className="card-text text bg-secondary text-white">PREMIUM TESTS</h3>
                         <div className="d-flex justify-content-center">

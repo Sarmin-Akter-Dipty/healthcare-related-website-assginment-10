@@ -1,21 +1,21 @@
 import React from 'react';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../context/useAuth';
+import './LOgin.css'
 
 
 const Login = () => {
-    const { signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, islogin, handleNameChange, } = useAuth();
+    const { signInUsingGoogle, handleRegistration, handleEmailChange, handlePasswordChange, error, toggleLogin, islogin, handleNameChange } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_uri = location.state?.from || '/home'
     console.log('came from', location.state?.from);
     const handleGoogleLogin = () => {
+        console.log(redirect_uri);
         signInUsingGoogle()
             .then(result => {
                 history.push(redirect_uri);
-
             })
-
     }
 
     return (
@@ -27,8 +27,8 @@ const Login = () => {
                 <input onBlur={handlePasswordChange} className="border-1 rounded w-25 " type="Password" placeholder="Enter Your Password" required /><br />
                 <button className=" bg-success text-white rounded-pill px-4 py-1 border-0 my-2">{islogin ? 'Login' : 'Register'}</button>
             </form>
-            <input onChange={toggleLogin} type="checkbox" />
-            <label htmlFor=""> <h6 className="text">Already Register?</h6></label>
+            <input onChange={toggleLogin} className="checkbox-size" type="checkbox" />
+            <label htmlFor=""> <h4 className="text">Already Register?</h4></label>
             <div className="text-danger">{error}</div>
             <div>-------or-------</div>
             <Link to="/home"><button onClick={handleGoogleLogin} className=" bg-success text-white rounded-pill px-4 py-1 border-0 my-4">Google Sign In</button></Link>

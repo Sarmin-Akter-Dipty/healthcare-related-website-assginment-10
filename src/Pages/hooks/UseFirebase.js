@@ -13,16 +13,22 @@ const useFirebase = () => {
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
     const [islogin, setIslogin] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     const signInUsingGoogle = () => {
         return signInWithPopup(auth, provider)
+
+            .finally(() => setIsLoading(false))
+
     }
     const logOut = () => {
+        setIsLoading(true)
         signOut(auth)
             .then(() => {
                 setUser({})
             })
+            .finally(() => setIsLoading(false))
     }
 
     useEffect(() => {
@@ -31,10 +37,12 @@ const useFirebase = () => {
                 console.log("ok", user);
                 setUser(user)
             }
+            setIsLoading(false)
         })
     }, [])
 
     const toggleLogin = (e) => {
+        console.log(e.target.value);
         setIslogin(e.target.value);
     }
     const handleEmailChange = (e) => {
@@ -62,7 +70,7 @@ const useFirebase = () => {
         islogin ? processLogin(email, password) : registerNewUser(email, password)
     }
     const processLogin = (email, password) => {
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 const user = result.user;
                 console.log(user);
@@ -73,7 +81,7 @@ const useFirebase = () => {
             })
     }
     const registerNewUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
+        return createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setUser(result.user)
                 updateName()
@@ -83,6 +91,7 @@ const useFirebase = () => {
             .catch(error => {
                 setError(error.message)
             })
+
 
     }
     const updateName = () => {
@@ -99,18 +108,17 @@ const useFirebase = () => {
     return {
         user,
         error,
+        islogin,
+        isLoading,
         signInUsingGoogle,
         logOut,
         handleEmailChange,
         handlePasswordChange,
         handleRegistration,
         toggleLogin,
-        islogin,
-        handleNameChange
-
+        handleNameChange,
+        processLogin,
+        registerNewUser
     }
-
 }
-
-
 export default useFirebase;
